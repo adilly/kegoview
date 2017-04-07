@@ -22,7 +22,7 @@ root = tk.Tk()
 root.geometry("480x320")
 root.title("Keg-O-View")
 
-#img = ImageTk.PhotoImage(Image.open("D:\\Pictures\\command_prompt.png"))
+#img = ImageTk.PhotoImage(Image.open("D:\\Pictures\\row1_keg.png"))
 
 backgroundFile = tk.PhotoImage(file = "D:\\Pictures\\kegs.png")
 backgroundLabel = tk.Label(root, image=backgroundFile)
@@ -39,12 +39,7 @@ frame.config(bg="black")
 #Row 1
 tk.Label(frame, 
          font = (defaultFont), 
-         #justify = 'left', 
          fg="red",
-         #bg="black",
-         #padx=30,
-         #image=img,
-         #height = 2, 
          width = 16, 
          text = side1
          ).grid(column=1, row=1)
@@ -53,11 +48,7 @@ tk.Label(frame, width = 23).grid(column=2, row=4)
          
 tk.Label(frame, 
          font = defaultFont, 
-         #justify = "left", 
          fg="red",
-         #bg="black",
-         #padx=80,
-         #height = 2, 
          width = 16,
          text = side2
          ).grid(column=3, row=1)
@@ -65,24 +56,17 @@ tk.Label(frame,
 #Row 2
 tk.Label(frame, 
          font = defaultFont, 
-         #justify = 'center', 
          fg="red",
-         #padx=30,
-         #bg="black",
-         #height = 1, 
          width = 16, 
          text = getStyle(side1)
          ).grid(column=1, row=2)
          
 tk.Label(frame, width = 20).grid(column=2, row=4)
+
          
 tk.Label(frame, 
          font = defaultFont, 
-         #justify = 'center', 
-         fg="red",
-         #padx=80,
-         #bg="black",
-         #height = 1, 
+         fg="red", 
          width = 16,
          text = getStyle(side2)
          ).grid(column=3, row=2)
@@ -90,11 +74,7 @@ tk.Label(frame,
 #Row 3
 tk.Label(frame, 
          font = defaultFont, 
-         #justify = "left", 
          fg="red",
-         #padx=30,
-         #bg="black",
-         #height = 2, 
          width = 16,
          text=getTemperature(side1)
          ).grid(column=1, row=3)
@@ -103,11 +83,7 @@ tk.Label(frame, width = 20).grid(column=2, row=4)
          
 tk.Label(frame, 
          font = defaultFont, 
-         #justify = "left", 
          fg="red",
-         #padx=80,
-         #bg="black",
-         #height = 2, 
          width = 16,
          text=getTemperature(side2)
          ).grid(column=3, row=3)
@@ -115,11 +91,7 @@ tk.Label(frame,
 #Row 4         
 tk.Label(frame, 
          font = defaultFont, 
-         #justify = "left", 
          fg="red",
-         #padx=30,
-         #bg="black",
-         #height = 2, 
          width = 16,
          text=getABV(side2)
          ).grid(column=1, row=4)
@@ -128,11 +100,7 @@ tk.Label(frame, width = 20).grid(column=2, row=4)
          
 tk.Label(frame, 
          font = defaultFont, 
-         #justify = "left", 
          fg="red",
-         #padx=80,
-         #bg="black",
-         #height = 2, 
          width = 16,
          text=getABV(side1)
          ).grid(column=3, row=4)
@@ -140,11 +108,7 @@ tk.Label(frame,
 #Row 5
 tk.Label(frame, 
          font = defaultFont, 
-         #justify = "left", 
          fg="red",
-         #padx=30,
-         #bg="black",
-         #height = 1, 
          width = 16, 
          text="Brew Date:"
          ).grid(column=1, row=5)
@@ -153,11 +117,7 @@ tk.Label(frame, width = 20).grid(column=2, row=4)
          
 tk.Label(frame, 
          font = defaultFont, 
-         #justify = "left", 
-         fg="red",
-         #padx=80,
-         #bg="black",
-         #height = 1, 
+         fg="red", 
          width = 16,   
          text="Brew Date:"
          ).grid(column=3, row=5)
@@ -165,11 +125,7 @@ tk.Label(frame,
 #Row 6
 tk.Label(frame, 
          font = defaultFont, 
-         #justify = "left",
          fg="red",
-         #padx=30,
-         #bg="black", 
-         #height = 2, 
          width = 16, 
          text=getBeerDate(side1)
          ).grid(column=1, row=6)
@@ -178,11 +134,7 @@ tk.Label(frame, width = 20).grid(column=2, row=4)
          
 tk.Label(frame, 
          font = defaultFont, 
-         #justify = "left", 
          fg="red",
-         #padx=80,
-         #bg="black",
-         #height = 2, 
          width = 16,   
          text=getBeerDate(side2)
          ).grid(column=3, row=6)
