@@ -6,137 +6,137 @@ Created on Mar 26, 2017
 
 import tkinter as tk
 
-from getStyle import getStyle
-from getABV import getABV
-from getBeerDate import getBeerDate
-from getTemperature import getTemperature
+from getstyle import getstyle
+from getabv import getabv
+from getbeerdate import getbeerdate
+from gettemperature import gettemperature
 #from PIL import ImageTk, Image
 
 
-side1 = "Shower Hop"
-side2 = "Shower Hop"
+SIDE_ONE = "Shower Hop"
+SIDE_TWO = "Shower Hop"
 
-defaultFont=("FontAwesome Regular",12)
+DEFAULT_FONT = ("FontAwesome Regular", 12)
 
-root = tk.Tk()
-root.geometry("480x320")
-root.title("Keg-O-View")
+ROOT = tk.Tk()
+ROOT.geometry("480x320")
+ROOT.title("Keg-O-View")
 
 #img = ImageTk.PhotoImage(Image.open("D:\\Pictures\\row1_keg.png"))
 
-backgroundFile = tk.PhotoImage(file = "D:\\Pictures\\kegs.png")
-backgroundLabel = tk.Label(root, image=backgroundFile)
-backgroundLabel.place(x=0,y=0, relwidth=1, relheight=1)
+BACKGROUND_FILE = tk.PhotoImage(file="D:\\Pictures\\kegs.png")
+BACKGROUND_LABEL = tk.Label(ROOT, image=BACKGROUND_FILE)
+BACKGROUND_LABEL.place(x=0, y=0, relwidth=1, relheight=1)
 
-frame = tk.Frame(root)
+FRAME = tk.Frame(ROOT)
 
 
-frame.grid(padx=7, pady=100)
-frame.config(bg="black")
+FRAME.grid(padx=7, pady=100)
+FRAME.config(bg="black")
 
 
 
 #Row 1
-tk.Label(frame, 
-         font = (defaultFont), 
+tk.Label(FRAME,
+         font=DEFAULT_FONT,
          fg="red",
-         width = 16, 
-         text = side1
-         ).grid(column=1, row=1)
+         width=16,
+         text=SIDE_ONE
+        ).grid(column=1, row=1)
 
-tk.Label(frame, width = 23).grid(column=2, row=4)
-         
-tk.Label(frame, 
-         font = defaultFont, 
+tk.Label(FRAME, width=23).grid(column=2, row=4)
+
+tk.Label(FRAME,
+         font=DEFAULT_FONT,
          fg="red",
-         width = 16,
-         text = side2
-         ).grid(column=3, row=1)
+         width=16,
+         text=SIDE_TWO
+        ).grid(column=3, row=1)
 
 #Row 2
-tk.Label(frame, 
-         font = defaultFont, 
+tk.Label(FRAME,
+         font=DEFAULT_FONT,
          fg="red",
-         width = 16, 
-         text = getStyle(side1)
-         ).grid(column=1, row=2)
-         
-tk.Label(frame, width = 20).grid(column=2, row=4)
+         width=16,
+         text=getstyle(SIDE_ONE)
+        ).grid(column=1, row=2)
 
-         
-tk.Label(frame, 
-         font = defaultFont, 
-         fg="red", 
-         width = 16,
-         text = getStyle(side2)
-         ).grid(column=3, row=2)
+tk.Label(FRAME, width=20).grid(column=2, row=4)
+
+
+tk.Label(FRAME,
+         font=DEFAULT_FONT,
+         fg="red",
+         width=16,
+         text=getstyle(SIDE_TWO)
+        ).grid(column=3, row=2)
 
 #Row 3
-tk.Label(frame, 
-         font = defaultFont, 
+tk.Label(FRAME,
+         font=DEFAULT_FONT,
          fg="red",
-         width = 16,
-         text=getTemperature(side1)
-         ).grid(column=1, row=3)
-         
-tk.Label(frame, width = 20).grid(column=2, row=4)
-         
-tk.Label(frame, 
-         font = defaultFont, 
+         width=16,
+         text=gettemperature()
+        ).grid(column=1, row=3)
+
+tk.Label(FRAME, width=20).grid(column=2, row=4)
+
+tk.Label(FRAME,
+         font=DEFAULT_FONT,
          fg="red",
-         width = 16,
-         text=getTemperature(side2)
-         ).grid(column=3, row=3)
-         
-#Row 4         
-tk.Label(frame, 
-         font = defaultFont, 
+         width=16,
+         text=gettemperature()
+        ).grid(column=3, row=3)
+
+#Row 4
+tk.Label(FRAME,
+         font=DEFAULT_FONT,
          fg="red",
-         width = 16,
-         text=getABV(side2)
-         ).grid(column=1, row=4)
-         
-tk.Label(frame, width = 20).grid(column=2, row=4)
-         
-tk.Label(frame, 
-         font = defaultFont, 
+         width=16,
+         text=getabv(SIDE_TWO)
+        ).grid(column=1, row=4)
+
+tk.Label(FRAME, width=20).grid(column=2, row=4)
+
+tk.Label(FRAME,
+         font=DEFAULT_FONT,
          fg="red",
-         width = 16,
-         text=getABV(side1)
-         ).grid(column=3, row=4)
+         width=16,
+         text=getabv(SIDE_ONE)
+        ).grid(column=3, row=4)
 
 #Row 5
-tk.Label(frame, 
-         font = defaultFont, 
+tk.Label(FRAME,
+         font=DEFAULT_FONT,
          fg="red",
-         width = 16, 
+         width=16,
          text="Brew Date:"
-         ).grid(column=1, row=5)
-         
-tk.Label(frame, width = 20).grid(column=2, row=4)
-         
-tk.Label(frame, 
-         font = defaultFont, 
-         fg="red", 
-         width = 16,   
-         text="Brew Date:"
-         ).grid(column=3, row=5)
-         
-#Row 6
-tk.Label(frame, 
-         font = defaultFont, 
-         fg="red",
-         width = 16, 
-         text=getBeerDate(side1)
-         ).grid(column=1, row=6)
-         
-tk.Label(frame, width = 20).grid(column=2, row=4)
-         
-tk.Label(frame, 
-         font = defaultFont, 
-         fg="red",
-         width = 16,   
-         text=getBeerDate(side2)
-         ).grid(column=3, row=6)
+        ).grid(column=1, row=5)
 
-root.mainloop()
+tk.Label(FRAME, width=20).grid(column=2, row=4)
+
+tk.Label(FRAME,
+         font=DEFAULT_FONT,
+         fg="red",
+         width=16,
+         text="Brew Date:"
+        ).grid(column=3, row=5)
+
+#Row 6
+tk.Label(FRAME,
+         font=DEFAULT_FONT,
+         fg="red",
+         width=16,
+         text=getbeerdate(SIDE_ONE)
+        ).grid(column=1, row=6)
+
+tk.Label(FRAME, width=20).grid(column=2, row=4)
+
+tk.Label(FRAME,
+         font=DEFAULT_FONT,
+         fg="red",
+         width=16,
+         text=getbeerdate(SIDE_TWO)
+        ).grid(column=3, row=6)
+
+ROOT.mainloop()

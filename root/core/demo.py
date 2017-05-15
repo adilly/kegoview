@@ -12,13 +12,12 @@ class Application(Frame):
         self.master.title("Grid Manager")
 
         for r in range(6):
-            self.master.rowconfigure(r, weight=1)    
+            self.master.rowconfigure(r, weight=1)
         for c in range(5):
             self.master.columnconfigure(c, weight=1)
             Label(master, text="Button {0}".format(c)).grid(row=6,column=c,sticky=E+W)
-
-        Frame1 = Frame(master, bg="red")
-        Frame1.grid(row = 0, column = 0, rowspan = 3, columnspan = 2, sticky = W+E+N+S) 
+        frame1 = Frame(master, bg="red")
+        frame1.grid(row=0, column=0, rowspan=3, columnspan=2, sticky=W+E+N+S)
         Frame2 = Frame(master, bg="blue")
         Frame2.grid(row = 3, column = 0, rowspan = 3, columnspan = 2, sticky = W+E+N+S)
         Frame3 = Frame(master, bg="green")
